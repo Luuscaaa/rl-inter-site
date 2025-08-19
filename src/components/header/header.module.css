@@ -8,6 +8,9 @@
   align-items: center;
   position: relative;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .logo {

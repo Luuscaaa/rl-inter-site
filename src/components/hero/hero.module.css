@@ -1,0 +1,55 @@
+.container {
+  padding: 0 10px;
+  margin-top: 120px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.boxList {
+  padding-left: 30px;
+}
+
+.itemList {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.boxBtn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnPrimary {
+  background: #ffd700;
+  color: #001f3f;
+  border-radius: 8px;
+  padding: 0.6em 2em;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btnWhatsapp {
+  background: #25d366;
+  color: #fff;
+  border: 2px solid #25d366;
+  border-radius: 6px;
+  padding: 0.6em 2em;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
