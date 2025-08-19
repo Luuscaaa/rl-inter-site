@@ -2,6 +2,91 @@
 
 .container {
   display: flex;
-  justify-content: centers;
-  background-color: aquamarine;
+  width: 100vw;
+  height: 100px;
+  background-color: #001f3f;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 80px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.menuButton {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  align-self: auto;
+}
+
+.sidebar {
+  background: #012040;
+  display: none;
+  flex-direction: column;
+}
+
+.sidebarOpen {
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #012040;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 1rem;
+  z-index: 101;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.menuItem {
+  color: #fff;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.menuItem:hover {
+  color: #f0a500;
+}
+
+.whatsappButton {
+  margin-top: 2rem;
+  background: #25d366;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+.whatsappButton:hover {
+  background: #128c7e;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.681);
+  z-index: 100;
 }
