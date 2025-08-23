@@ -17,7 +17,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 31, 63, 0.6);
+  background-color: rgba(0, 0, 0, 0.749);
   z-index: 1;
 }
 

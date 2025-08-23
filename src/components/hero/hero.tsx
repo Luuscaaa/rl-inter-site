@@ -5,26 +5,16 @@ function Hero() {
     <div className={styles.container}>
       <div>
         <h1 className={styles.title}>
-          Assessoria Esportiva Integrada: Treino, Nutrição e Fisioterapia em um
-          só Lugar!
+          Assessoria Esportiva Integrada:
+          <br />
+          <span className={styles.title2}>
+            Treino, Nutrição e Fisioterapia em um só Lugar!
+          </span>
         </h1>
         <h4 className={styles.subtitle}>
-          Planos 100% personalizados de Treino, Nutrição e Fisioterapia, com
-          acompanhamento unificado que maximiza resultados e previne lesões —
-          sem complicação.
+          Planos 100% personalizados com acompanhamento unificado que maximiza
+          resultados e previne lesões.
         </h4>
-        <ul className={styles.boxList}>
-          <li className={styles.itemList}>
-            Treinos exclusivos e adaptados à sua modalidade
-          </li>
-          <li className={styles.itemList}>
-            Cardápio nutricional ajustado em tempo real
-          </li>
-          <li className={styles.itemList}>Suporte multidisciplinar online</li>
-          <li className={styles.itemList}>
-            Protocolos de prevenção e reabilitação de lesões
-          </li>
-        </ul>
       </div>
       <div className={styles.boxBtn}>
         <a className={styles.btnPrimary} href="">
