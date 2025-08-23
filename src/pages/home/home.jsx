@@ -6,8 +6,10 @@ import styles from "./home.module.css";
 function Home() {
   return (
     <div className={styles.container}>
-      <Header />
-      <Hero />
+      <div className={styles.background}>
+        <Header />
+        <Hero />
+      </div>
       <Services />
     </div>
   );
