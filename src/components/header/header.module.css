@@ -13,13 +13,13 @@
 }
 
 .logo {
-  height: 80px;
-  margin-left: 10px;
+  height: 100px;
+  margin-left: 20px;
   margin-top: 10px;
 }
 
 .menuButton {
-  font-size: 2rem;
+  font-size: 3rem;
   background: none;
   border: none;
   color: #fff;
@@ -29,8 +29,16 @@
 
 .sidebar {
   background: #012040;
-  display: none;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  transition: right 1s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 1s, box-shadow 1s;
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .sidebarOpen {
@@ -43,7 +51,12 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem 1rem 1rem;
+  transition: right 1s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 1s, box-shadow 1s;
+  opacity: 1;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
   z-index: 101;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .closeButton {
