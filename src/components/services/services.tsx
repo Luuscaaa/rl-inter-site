@@ -1,67 +1,62 @@
-import {
-  FaAppleAlt,
-  FaBuilding,
-  FaDumbbell,
-  FaHeartbeat,
-  FaMobileAlt,
-} from "react-icons/fa";
 import styles from "./services.module.css";
+import treinoPersonalizado from "../../assets/treino-personalizado.jpg";
+import nutricaoEsportiva from "../../assets/nutricao-esportiva.jpg";
+import fisioterapiaPreventiva from "../../assets/fisioterapia-preventiva.jpg";
+import atendimentoOnline from "../../assets/atendimento-online.jpg";
+import paraEmpresa from "../../assets/para-empresas.jpg";
 
 function Services() {
   return (
     <div className={styles.container}>
       <div>
-        <h2>Serviços</h2>
+        <h2 className={styles.title}>NOSSOS SERVIÇOS</h2>
+        <p className={styles.description}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis
+          suscipit corporis, porro minima eius mollitia nostrum libero, at
+          facere eaque sed! Architecto dolorem deleniti minima repellat culpa ea
+          quidem?
+        </p>
       </div>
       <div className={styles.servicesList}>
         <div className={styles.card}>
-          <FaDumbbell className={styles.cardIcon} size={40} color="#001f3f" />
+          <img
+            src={treinoPersonalizado}
+            alt="Treino Personalizado"
+            className={styles.img}
+          />
           <h4 className={styles.cardTitle}>Treino Personalizado</h4>
-          <p className={styles.cardDesc}>
-            Planos de treino adaptados ao seu nível — do iniciante ao atleta de
-            alto rendimento. Evolua com segurança e eficiência, com
-            acompanhamento contínuo e ajustes semanais.
-          </p>
           <button className={styles.cardBtn}>Saiba Mais</button>
         </div>
         <div className={styles.card}>
-          <FaAppleAlt className={styles.cardIcon} size={40} color="#001f3f" />
+          <img
+            src={nutricaoEsportiva}
+            alt="Nutrição Esportiva"
+            className={styles.img}
+          />
           <h4 className={styles.cardTitle}>Nutrição Esportiva</h4>
-          <p className={styles.cardDesc}>
-            Dietas personalizados para melhorar desempenho, composição corporal
-            e recuperação. Tudo alinhado ao seu treino e rotina, com suporte
-            direto do nutricionista.
-          </p>
           <button className={styles.cardBtn}>Saiba Mais</button>
         </div>
         <div className={styles.card}>
-          <FaHeartbeat className={styles.cardIcon} size={40} color="#001f3f" />
+          <img
+            src={fisioterapiaPreventiva}
+            alt="Fisioterapia Preventiva"
+            className={styles.img}
+          />
           <h4 className={styles.cardTitle}>Fisioterapia Preventiva</h4>
-          <p className={styles.cardDesc}>
-            Protocolos específicos para prevenir lesões e acelerar a
-            recuperação. Ideal para quem quer treinar com segurança ou já
-            enfrenta dores e limitações.
-          </p>
           <button className={styles.cardBtn}>Saiba Mais</button>
         </div>
         <div className={styles.card}>
-          <FaMobileAlt className={styles.cardIcon} size={40} color="#001f3f" />
+          <img
+            src={atendimentoOnline}
+            alt="Atendimento Online"
+            className={styles.img}
+          />
           <h4 className={styles.cardTitle}>Atendimento Online</h4>
-          <p className={styles.cardDesc}>
-            Suporte direto com especialistas via WhatsApp, vídeo e e-mail. Tire
-            dúvidas, receba ajustes e mantenha o foco com orientação
-            profissional em tempo real.
-          </p>
           <button className={styles.cardBtn}>Saiba Mais</button>
         </div>
         <div className={styles.card}>
-          <FaBuilding className={styles.cardIcon} size={40} color="#001f3f" />
+          <img src={paraEmpresa} alt="Para Empresas" className={styles.img} />
           <h4 className={styles.cardTitle}>Para Empresas</h4>
-          <p className={styles.cardDesc}>
-            Ofereça aos seus colaboradores um benefício exclusivo: plano
-            integrado de saúde e performance com treino, nutrição e
-            fisioterapia. Mais qualidade de vida, menos afastamentos.
-          </p>
           <button className={styles.cardBtn}>Saiba Mais</button>
         </div>
       </div>
