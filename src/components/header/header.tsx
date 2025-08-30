@@ -1,13 +1,18 @@
 import styles from "./header.module.css";
 import logo from "../../assets/logo.png";
 import { useState } from "react";
+import {
+  HEADER_LOGO_ALT,
+  HEADER_MENU,
+  HEADER_WHATSAPP,
+} from "../../constants/texts";
 
 function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <div className={styles.container}>
-      <img src={logo} alt="logo do site" className={styles.logo} />
+      <img src={logo} alt={HEADER_LOGO_ALT} className={styles.logo} />
       {!open && (
         <button className={styles.menuButton} onClick={() => setOpen(true)}>
           &#9776;
@@ -19,28 +24,18 @@ function Header() {
             &times;
           </button>
         )}
-        <a href="/" className={styles.menuItem}>
-          Início
-        </a>
-        <a href="/projetos" className={styles.menuItem}>
-          Projetos
-        </a>
-        <a href="/servicos" className={styles.menuItem}>
-          Serviços
-        </a>
-        <a href="/sobre" className={styles.menuItem}>
-          Sobre
-        </a>
-        <a href="/contato" className={styles.menuItem}>
-          Contato
-        </a>
+        {HEADER_MENU.map((item) => (
+          <a key={item.href} href={item.href} className={styles.menuItem}>
+            {item.label}
+          </a>
+        ))}
         <a
-          href="https://wa.me/SEUNUMEROAQUI"
+          href={HEADER_WHATSAPP.href}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.whatsappButton}
         >
-          WhatsApp
+          {HEADER_WHATSAPP.label}
         </a>
       </nav>
       {open && (

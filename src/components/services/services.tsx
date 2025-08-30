@@ -4,60 +4,64 @@ import nutricaoEsportiva from "../../assets/nutricao-esportiva.jpg";
 import fisioterapiaPreventiva from "../../assets/fisioterapia-preventiva.jpg";
 import atendimentoOnline from "../../assets/atendimento-online.jpg";
 import paraEmpresa from "../../assets/para-empresas.jpg";
+import {
+  SERVICES_TITLE,
+  SERVICES_DESCRIPTION,
+  SERVICES_CARDS,
+} from "../../constants/texts";
 
 function Services() {
   return (
     <div className={styles.container}>
       <div>
-        <h2 className={styles.title}>NOSSOS SERVIÇOS</h2>
-        <p className={styles.description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis
-          suscipit corporis, porro minima eius mollitia nostrum libero, at
-          facere eaque sed! Architecto dolorem deleniti minima repellat culpa ea
-          quidem?
-        </p>
+        <h2 className={styles.title}>{SERVICES_TITLE}</h2>
+        <p className={styles.description}>{SERVICES_DESCRIPTION}</p>
       </div>
       <div className={styles.servicesList}>
         <div className={styles.card}>
           <img
             src={treinoPersonalizado}
-            alt="Treino Personalizado"
+            alt={SERVICES_CARDS[0].alt}
             className={styles.img}
           />
-          <h4 className={styles.cardTitle}>Treino Personalizado</h4>
-          <button className={styles.cardBtn}>Saiba Mais</button>
+          <h4 className={styles.cardTitle}>{SERVICES_CARDS[0].title}</h4>
+          <button className={styles.cardBtn}>{SERVICES_CARDS[0].btn}</button>
         </div>
         <div className={styles.card}>
           <img
             src={nutricaoEsportiva}
-            alt="Nutrição Esportiva"
+            alt={SERVICES_CARDS[1].alt}
             className={styles.img}
           />
-          <h4 className={styles.cardTitle}>Nutrição Esportiva</h4>
-          <button className={styles.cardBtn}>Saiba Mais</button>
+          <h4 className={styles.cardTitle}>{SERVICES_CARDS[1].title}</h4>
+          <button className={styles.cardBtn}>{SERVICES_CARDS[1].btn}</button>
         </div>
         <div className={styles.card}>
           <img
             src={fisioterapiaPreventiva}
-            alt="Fisioterapia Preventiva"
+            alt={SERVICES_CARDS[2].alt}
             className={styles.img}
           />
-          <h4 className={styles.cardTitle}>Fisioterapia Preventiva</h4>
-          <button className={styles.cardBtn}>Saiba Mais</button>
+          <h4 className={styles.cardTitle}>{SERVICES_CARDS[2].title}</h4>
+          <button className={styles.cardBtn}>{SERVICES_CARDS[2].btn}</button>
         </div>
         <div className={styles.card}>
           <img
             src={atendimentoOnline}
-            alt="Atendimento Online"
+            alt={SERVICES_CARDS[3].alt}
             className={styles.img}
           />
-          <h4 className={styles.cardTitle}>Atendimento Online</h4>
-          <button className={styles.cardBtn}>Saiba Mais</button>
+          <h4 className={styles.cardTitle}>{SERVICES_CARDS[3].title}</h4>
+          <button className={styles.cardBtn}>{SERVICES_CARDS[3].btn}</button>
         </div>
         <div className={styles.card}>
-          <img src={paraEmpresa} alt="Para Empresas" className={styles.img} />
-          <h4 className={styles.cardTitle}>Para Empresas</h4>
-          <button className={styles.cardBtn}>Saiba Mais</button>
+          <img
+            src={paraEmpresa}
+            alt={SERVICES_CARDS[4].alt}
+            className={styles.img}
+          />
+          <h4 className={styles.cardTitle}>{SERVICES_CARDS[4].title}</h4>
+          <button className={styles.cardBtn}>{SERVICES_CARDS[4].btn}</button>
         </div>
       </div>
     </div>

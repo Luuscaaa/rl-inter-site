@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
 import React, { useRef, useCallback } from "react";
 import styles from "./testimonials.module.css";
-
-const testimonials = [
-  { author: "João", text: "Ótimo serviço, recomendo muito!" },
-  { author: "Maria", text: "Equipe atenciosa e resultados reais." },
-  { author: "Carlos", text: "Transformou minha rotina esportiva!" },
-];
+import { TESTIMONIALS_LIST, TESTIMONIALS_ARIA } from "../../constants/texts";
 
 function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -15,11 +10,14 @@ function Testimonials() {
 
   const goTo = useCallback((i) => setIndex(i), []);
   const prev = useCallback(
-    () => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length),
+    () =>
+      setIndex(
+        (i) => (i - 1 + TESTIMONIALS_LIST.length) % TESTIMONIALS_LIST.length
+      ),
     []
   );
   const next = useCallback(
-    () => setIndex((i) => (i + 1) % testimonials.length),
+    () => setIndex((i) => (i + 1) % TESTIMONIALS_LIST.length),
     []
   );
 
@@ -58,7 +56,7 @@ function Testimonials() {
     <section
       className={styles.carousel}
       role="region"
-      aria-label="Depoimentos de clientes"
+      aria-label={TESTIMONIALS_ARIA.section}
       tabIndex={0}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -66,34 +64,34 @@ function Testimonials() {
       <button
         className={styles.arrow}
         onClick={prev}
-        aria-label="Depoimento anterior"
+        aria-label={TESTIMONIALS_ARIA.prev}
       >
         &#8592;
       </button>
       <div className={styles.slide} aria-live="polite">
         <blockquote>
-          <p>{testimonials[index].text}</p>
-          <footer>- {testimonials[index].author}</footer>
+          <p>{TESTIMONIALS_LIST[index].text}</p>
+          <footer>- {TESTIMONIALS_LIST[index].author}</footer>
         </blockquote>
       </div>
       <button
         className={styles.arrow}
         onClick={next}
-        aria-label="Próximo depoimento"
+        aria-label={TESTIMONIALS_ARIA.next}
       >
         &#8594;
       </button>
       <div
         className={styles.dots}
         role="tablist"
-        aria-label="Navegação dos depoimentos"
+        aria-label={TESTIMONIALS_ARIA.dots}
       >
-        {testimonials.map((_, i) => (
+        {TESTIMONIALS_LIST.map((_, i) => (
           <button
             key={i}
             className={i === index ? styles.dotActive : styles.dot}
             onClick={() => goTo(i)}
-            aria-label={`Ir para depoimento ${i + 1}`}
+            aria-label={TESTIMONIALS_ARIA.dot(i)}
             aria-selected={i === index}
             tabIndex={i === index ? 0 : -1}
             role="tab"

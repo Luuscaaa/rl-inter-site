@@ -1,24 +1,26 @@
 import styles from "./hero.module.css";
+import {
+  HERO_TITLE,
+  HERO_TITLE2,
+  HERO_SUBTITLE,
+  HERO_BTN_SAIBA_MAIS,
+  HERO_BTN_WHATSAPP,
+} from "../../constants/texts";
 
 function Hero() {
   return (
     <div className={styles.container}>
       <div>
         <h1 className={styles.title}>
-          Assessoria Esportiva Integrada:
+          {HERO_TITLE}
           <br />
-          <span className={styles.title2}>
-            Treino, Nutrição e Fisioterapia em um só Lugar!
-          </span>
+          <span className={styles.title2}>{HERO_TITLE2}</span>
         </h1>
-        <h4 className={styles.subtitle}>
-          Planos 100% personalizados com acompanhamento unificado que maximiza
-          resultados e previne lesões.
-        </h4>
+        <h4 className={styles.subtitle}>{HERO_SUBTITLE}</h4>
       </div>
       <div className={styles.boxBtn}>
         <a className={styles.btnPrimary} href="">
-          Saiba Mais
+          {HERO_BTN_SAIBA_MAIS}
         </a>
         <a
           className={styles.btnWhatsapp}
@@ -26,7 +28,7 @@ function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          WhatsApp
+          {HERO_BTN_WHATSAPP}
         </a>
       </div>
     </div>
