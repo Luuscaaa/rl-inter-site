@@ -5,6 +5,7 @@ import styles from "./home.module.css";
 import About from "../../components/about/about";
 import Testimonials from "../../components/testimonials/testimonials";
 import Footer from "../../components/footer/footer";
+import FAQSection from "../../components/FAQSection/FAQSection";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <About />
       <Services />
       <Testimonials />
+      <FAQSection />
       <Footer />
     </div>
   );

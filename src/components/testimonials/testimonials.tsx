@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import React, { useRef, useCallback } from "react";
 import styles from "./testimonials.module.css";
-import { TESTIMONIALS_LIST, TESTIMONIALS_ARIA } from "../../constants/texts";
+import {
+  TESTIMONIALS_LIST,
+  TESTIMONIALS_ARIA,
+  TESTIMONIALS_TITLE,
+} from "../../constants/texts";
 
 function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -53,52 +57,55 @@ function Testimonials() {
   };
 
   return (
-    <section
-      className={styles.carousel}
-      role="region"
-      aria-label={TESTIMONIALS_ARIA.section}
-      tabIndex={0}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <button
-        className={styles.arrow}
-        onClick={prev}
-        aria-label={TESTIMONIALS_ARIA.prev}
+    <div className={styles.container}>
+      <h1 className={styles.title}>{TESTIMONIALS_TITLE}</h1>
+      <section
+        className={styles.carousel}
+        role="region"
+        aria-label={TESTIMONIALS_ARIA.section}
+        tabIndex={0}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        &#8592;
-      </button>
-      <div className={styles.slide} aria-live="polite">
-        <blockquote>
-          <p>{TESTIMONIALS_LIST[index].text}</p>
-          <footer>- {TESTIMONIALS_LIST[index].author}</footer>
-        </blockquote>
-      </div>
-      <button
-        className={styles.arrow}
-        onClick={next}
-        aria-label={TESTIMONIALS_ARIA.next}
-      >
-        &#8594;
-      </button>
-      <div
-        className={styles.dots}
-        role="tablist"
-        aria-label={TESTIMONIALS_ARIA.dots}
-      >
-        {TESTIMONIALS_LIST.map((_, i) => (
-          <button
-            key={i}
-            className={i === index ? styles.dotActive : styles.dot}
-            onClick={() => goTo(i)}
-            aria-label={TESTIMONIALS_ARIA.dot(i)}
-            aria-selected={i === index}
-            tabIndex={i === index ? 0 : -1}
-            role="tab"
-          />
-        ))}
-      </div>
-    </section>
+        <button
+          className={styles.arrow}
+          onClick={prev}
+          aria-label={TESTIMONIALS_ARIA.prev}
+        >
+          &#8592;
+        </button>
+        <div className={styles.slide} aria-live="polite">
+          <blockquote>
+            <p>{TESTIMONIALS_LIST[index].text}</p>
+            <footer>- {TESTIMONIALS_LIST[index].author}</footer>
+          </blockquote>
+        </div>
+        <button
+          className={styles.arrow}
+          onClick={next}
+          aria-label={TESTIMONIALS_ARIA.next}
+        >
+          &#8594;
+        </button>
+        <div
+          className={styles.dots}
+          role="tablist"
+          aria-label={TESTIMONIALS_ARIA.dots}
+        >
+          {TESTIMONIALS_LIST.map((_, i) => (
+            <button
+              key={i}
+              className={i === index ? styles.dotActive : styles.dot}
+              onClick={() => goTo(i)}
+              aria-label={TESTIMONIALS_ARIA.dot(i)}
+              aria-selected={i === index}
+              tabIndex={i === index ? 0 : -1}
+              role="tab"
+            />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 
