@@ -4,6 +4,7 @@ import Services from "../../components/services/services";
 import styles from "./home.module.css";
 import About from "../../components/about/about";
 import Testimonials from "../../components/testimonials/testimonials";
+import Footer from "../../components/footer/footer";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <About />
       <Services />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
