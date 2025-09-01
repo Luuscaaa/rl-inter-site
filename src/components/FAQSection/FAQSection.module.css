@@ -1,17 +1,13 @@
 .faqSection {
-  max-width: 700px;
-  margin: 3rem auto;
   background: #fff;
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-  padding: 2rem 2.5rem;
+  padding: 0 20px;
+  margin-bottom: 30px;
 }
 
-.heading {
-  font-family: "Oswald", Arial, sans-serif;
-  font-size: 2rem;
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
   margin-bottom: 1.5rem;
-  color: #222;
 }
 
 .list {
@@ -30,7 +26,7 @@
   border: none;
   text-align: left;
   font-size: 1.1rem;
-  font-family: inherit;
+  font-family: "lato", sans-serif;
   font-weight: 600;
   color: #333;
   padding: 1rem 0;
@@ -43,7 +39,6 @@
 }
 .question:focus {
   color: #f5b301;
-  outline: 2px solid #f5b301;
   outline-offset: 2px;
 }
 
@@ -56,24 +51,9 @@
 
 .answer {
   font-size: 1rem;
+  font-family: "Lato", sans-serif;
   color: #444;
   background: #fafafa;
-  border-radius: 0 0 1rem 1rem;
   transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (max-width: 600px) {
-  .faqSection {
-    padding: 1.2rem 0.7rem;
-  }
-  .heading {
-    font-size: 1.3rem;
-  }
-  .question {
-    font-size: 1rem;
-    padding: 0.8rem 0;
-  }
-  .answer {
-    font-size: 0.95rem;
-  }
+  padding: 0 5px;
 }
