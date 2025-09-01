@@ -9,6 +9,7 @@
 .title {
   font-family: "Oswald", sans-serif;
   font-size: 34px;
+  color: #001f3f;
 }
 
 .description {
@@ -61,8 +62,8 @@
   font-size: 14px;
   margin-top: 10px;
   align-self: center;
-  color: #001f3f;
-  background-color: #00ffff;
+  color: #fff;
+  background-color: #001f3f;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
 }

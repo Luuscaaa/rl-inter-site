@@ -10,7 +10,7 @@ export default function FAQSection() {
   return (
     <section className={styles.faqSection} aria-labelledby="faq-heading">
       <h2 id="faq-heading" className={styles.title}>
-        Perguntas Frequentes
+        PERGUNTAS FREQUENTES
       </h2>
       <ul className={styles.list}>
         {faqData.map(({ id, question, answer }) => (

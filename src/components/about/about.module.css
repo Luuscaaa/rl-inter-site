@@ -7,6 +7,7 @@
 .title {
   font-family: "Oswald", sans-serif;
   font-size: 34px;
+  color: #001f3f;
 }
 
 .text {
@@ -16,13 +17,18 @@
   line-height: 1.7;
 }
 
+.highlight {
+  color: #001f3f;
+  font-weight: bold;
+}
+
 .socialIcons {
   display: flex;
   gap: 20px;
 }
 
 .socialIcons a {
-  border: 1px solid #000;
+  border: 1px solid #001f3f;
   border-radius: 8px;
   width: 40px;
   height: 40px;

@@ -5,6 +5,7 @@
 .title {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
+  color: #001f3f;
 }
 
 .text {
@@ -115,7 +116,7 @@
 }
 .arrow:hover,
 .arrow:focus {
-  background: #00ffff;
+  background: #001f3f;
   color: #fff;
 }
 .arrow:first-of-type {
@@ -142,5 +143,5 @@
   transition: background 0.2s;
 }
 .dotActive {
-  background: #00ffff;
+  background: #001f3f;
 }
