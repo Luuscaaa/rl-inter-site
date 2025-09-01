@@ -3,7 +3,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 
 function About() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="sobre">
       <h1 className={styles.title}>SOBRE NÓS</h1>
       <p className={styles.text}>
         Na <span className={styles.highlight}>RL Inter</span>, entendemos que

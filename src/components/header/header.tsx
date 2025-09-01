@@ -10,6 +10,18 @@ import {
 function Header() {
   const [open, setOpen] = useState(false);
 
+  // Função para scroll suave
+  const handleMenuClick = (e, href) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        setOpen(false);
+      }
+    }
+  };
+
   return (
     <div className={styles.container}>
       <img src={logo} alt={HEADER_LOGO_ALT} className={styles.logo} />
@@ -24,11 +36,22 @@ function Header() {
             &times;
           </button>
         )}
-        {HEADER_MENU.map((item) => (
-          <a key={item.href} href={item.href} className={styles.menuItem}>
-            {item.label}
-          </a>
-        ))}
+        {HEADER_MENU.map((item) =>
+          item.href.startsWith("#") ? (
+            <a
+              key={item.href}
+              href={item.href}
+              className={styles.menuItem}
+              onClick={(e) => handleMenuClick(e, item.href)}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <a key={item.href} href={item.href} className={styles.menuItem}>
+              {item.label}
+            </a>
+          )
+        )}
         <a
           href={HEADER_WHATSAPP.href}
           target="_blank"

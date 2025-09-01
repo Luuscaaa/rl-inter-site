@@ -2,11 +2,11 @@
 
 export const HEADER_LOGO_ALT = "logo do site";
 export const HEADER_MENU = [
-  { label: "Início", href: "/" },
-  { label: "Projetos", href: "/projetos" },
-  { label: "Serviços", href: "/servicos" },
-  { label: "Sobre", href: "/sobre" },
-  { label: "Contato", href: "/contato" },
+  { label: "Início", href: "#inicio" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Programas", href: "#servicos" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "FAQ", href: "#faq" },
 ];
 export const HEADER_WHATSAPP = {
   label: "WhatsApp",
@@ -24,9 +24,9 @@ export const HERO_BTN_WHATSAPP = "WhatsApp";
 
 // SERVICES
 
-export const SERVICES_TITLE = "NOSSOS SERVIÇOS";
+export const SERVICES_TITLE = "NOSSOS PROGRAMAS";
 export const SERVICES_DESCRIPTION =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis\n          suscipit corporis, porro minima eius mollitia nostrum libero, at\n          facere eaque sed! Architecto dolorem deleniti minima repellat culpa ea\n          quidem?";
+  "Nossos programas unem saúde, performance e bem-estar em um acompanhamento completo, com planos personalizados que integram treino, nutrição e prevenção para garantir evolução segura e eficiente.";
 export const SERVICES_CARDS = [
   {
     title: "Treino Personalizado",

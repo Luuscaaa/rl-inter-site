@@ -10,14 +10,22 @@ import FAQSection from "../../components/FAQSection/FAQSection";
 function Home() {
   return (
     <div className={styles.container}>
-      <div className={styles.background}>
+      <div className={styles.background} id="inicio">
         <Header />
         <Hero />
       </div>
-      <About />
-      <Services />
-      <Testimonials />
-      <FAQSection />
+      <div id="sobre">
+        <About />
+      </div>
+      <div id="servicos">
+        <Services />
+      </div>
+      <div id="depoimentos">
+        <Testimonials />
+      </div>
+      <div id="faq">
+        <FAQSection />
+      </div>
       <Footer />
     </div>
   );
