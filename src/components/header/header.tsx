@@ -60,6 +60,7 @@ function Header() {
         >
           {HEADER_WHATSAPP.label}
         </a>
+        <img src={logo} alt={HEADER_LOGO_ALT} className={styles.logoMenu} />
       </nav>
       {open && (
         <div className={styles.overlay} onClick={() => setOpen(false)}></div>

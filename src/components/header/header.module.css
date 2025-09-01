@@ -16,6 +16,13 @@
   margin-top: 10px;
 }
 
+.logoMenu {
+  width: 150px;
+  height: 120px;
+  align-self: center;
+  margin-top: 40px;
+}
+
 .menuButton {
   font-size: 3rem;
   background: none;
