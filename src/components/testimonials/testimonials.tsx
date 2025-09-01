@@ -76,8 +76,10 @@ function Testimonials() {
         </button>
         <div className={styles.slide} aria-live="polite">
           <blockquote>
-            <p>{TESTIMONIALS_LIST[index].text}</p>
-            <footer>- {TESTIMONIALS_LIST[index].author}</footer>
+            <p className={styles.text}>{TESTIMONIALS_LIST[index].text}</p>
+            <footer className={styles.author}>
+              - {TESTIMONIALS_LIST[index].author}
+            </footer>
           </blockquote>
         </div>
         <button
