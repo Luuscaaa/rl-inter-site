@@ -24,7 +24,7 @@ function Hero() {
         </a>
         <a
           className={styles.btnWhatsapp}
-          href="https://wa.me/5511998297808"
+          href="https://wa.me/+5511933441275"
           target="_blank"
           rel="noopener noreferrer"
         >

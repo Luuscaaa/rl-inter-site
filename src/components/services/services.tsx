@@ -10,6 +10,12 @@ import {
   SERVICES_CARDS,
 } from "../../constants/texts";
 
+const WHATSAPP_URL = "https://wa.me/+5511933441275";
+
+function handleWhatsappRedirect() {
+  window.open(WHATSAPP_URL, "_blank");
+}
+
 function Services() {
   return (
     <div className={styles.container}>
@@ -25,7 +31,9 @@ function Services() {
             className={styles.img}
           />
           <h4 className={styles.cardTitle}>{SERVICES_CARDS[0].title}</h4>
-          <button className={styles.cardBtn}>{SERVICES_CARDS[0].btn}</button>
+          <button className={styles.cardBtn} onClick={handleWhatsappRedirect}>
+            {SERVICES_CARDS[0].btn}
+          </button>
         </div>
         <div className={styles.card}>
           <img
@@ -34,7 +42,9 @@ function Services() {
             className={styles.img}
           />
           <h4 className={styles.cardTitle}>{SERVICES_CARDS[1].title}</h4>
-          <button className={styles.cardBtn}>{SERVICES_CARDS[1].btn}</button>
+          <button className={styles.cardBtn} onClick={handleWhatsappRedirect}>
+            {SERVICES_CARDS[1].btn}
+          </button>
         </div>
         <div className={styles.card}>
           <img
@@ -43,7 +53,9 @@ function Services() {
             className={styles.img}
           />
           <h4 className={styles.cardTitle}>{SERVICES_CARDS[2].title}</h4>
-          <button className={styles.cardBtn}>{SERVICES_CARDS[2].btn}</button>
+          <button className={styles.cardBtn} onClick={handleWhatsappRedirect}>
+            {SERVICES_CARDS[2].btn}
+          </button>
         </div>
         <div className={styles.card}>
           <img
@@ -52,7 +64,9 @@ function Services() {
             className={styles.img}
           />
           <h4 className={styles.cardTitle}>{SERVICES_CARDS[3].title}</h4>
-          <button className={styles.cardBtn}>{SERVICES_CARDS[3].btn}</button>
+          <button className={styles.cardBtn} onClick={handleWhatsappRedirect}>
+            {SERVICES_CARDS[3].btn}
+          </button>
         </div>
         <div className={styles.card}>
           <img
@@ -61,7 +75,9 @@ function Services() {
             className={styles.img}
           />
           <h4 className={styles.cardTitle}>{SERVICES_CARDS[4].title}</h4>
-          <button className={styles.cardBtn}>{SERVICES_CARDS[4].btn}</button>
+          <button className={styles.cardBtn} onClick={handleWhatsappRedirect}>
+            {SERVICES_CARDS[4].btn}
+          </button>
         </div>
       </div>
     </div>
