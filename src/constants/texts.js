@@ -1,3 +1,8 @@
+// FOOTER
+export const FOOTER_ARIA = {
+  footer: "Rodapé do site",
+  menu: "Menu do rodapé",
+};
 // HEADER
 
 export const HEADER_LOGO_ALT = "logo do site";
@@ -72,30 +77,3 @@ export const TESTIMONIALS_ARIA = {
   dots: "Navegação dos depoimentos",
   dot: (i) => `Ir para depoimento ${i + 1}`,
 };
-
-// FOOTER
-
-export const FOOTER_BRAND = "RL Inter Site";
-export const FOOTER_ARIA = {
-  footer: "Rodapé do site",
-  brand: "Página inicial",
-  menu: "Menu do rodapé",
-  social: "Redes sociais",
-};
-
-export const FOOTER_LINKS = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Contato", href: "#contato" },
-];
-
-export const FOOTER_SOCIAL = [
-  {
-    label: "Instagram",
-    href: "https://instagram.com/",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/",
-  },
-];
